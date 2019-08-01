@@ -1,0 +1,130 @@
+// Links
+@mixin color($color, $hover) {
+    color: $color;
+
+    &:hover {
+        color: $hover;
+    }
+}
+
+// Button
+@mixin button($bgClr, $txtClr) {
+    background-color: $bgClr;
+    border-color: $bgClr;
+    color: $txtClr !important;
+
+    &:hover {
+        background-color: darken($bgClr, 6);
+        border-color: darken($bgClr, 6);
+    }
+
+    &:focus {
+        background-color: darken($bgClr, 9);
+        border-color: darken($bgClr, 9);
+    }
+}
+
+@mixin buttonLine($brdClr, $txtClr) {
+    border-color: $brdClr !important;
+    color: $txtClr;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $brdClr;
+        @include transitions(700);
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $brdClr;
+        color: #fff !important;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+@mixin buttonSolid($bgClr, $txtClr) {
+    background-color: $bgClr;
+    color: $txtClr !important;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $bgClr;
+        @include transitions(700);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $bgClr;
+        color: #fff !important;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+// Transitions
+@mixin transitions($num) {
+    transition: #{$num}ms cubic-bezier(.17, .67, 0, 1.01);
+}
+
+// Reveal Animation
+@mixin reveal($height, $bgClr) {
+    >* {
+        display: block;
+        width: 100%;
+        height: #{$height}px;
+        animation-name: slideTop;
+        transition: 1000ms cubic-bezier(.17, .67, 0, 1.01);
+        transform: translateY(100%);
+        animation-fill-mode: both;
+        position: relative;
+        z-index: -1;
+        overflow: hidden;
+        opacity: 0;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: #{$height}px;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            background: $bgClr;
+            z-index: 1;
+            transition: 1000ms cubic-bezier(.17, .67, 0, 1.01);
+            transform: translateY(100%);
+        }
+    }
+
+    &.aos-animate {
+        >* {
+            transform: translateY(0);
+            opacity: 1;
+
+            &:before {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}

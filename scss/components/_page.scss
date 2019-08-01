@@ -1,0 +1,22 @@
+.page.type-page {
+    .outer {
+        .inner {
+            .entry-body {
+                font-size: 1.2rem;
+                line-height: 1.612;
+                color: $secClr;
+                *+address,
+                *+dl,
+                *+fieldset,
+                *+figure,
+                *+ol,
+                *+p,
+                *+pre,
+                *+ul,
+                *+blockquote {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}

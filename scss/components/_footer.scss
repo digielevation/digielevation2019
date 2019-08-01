@@ -1,0 +1,176 @@
+.pr__footer {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: $footerBg;
+    color: $footerTxt;
+
+    a,
+    .title {
+        color: $footerLnk;
+    }
+
+    .button {
+        color: $footerLnk !important;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pr__footer__top {
+        .pr__social {
+            > .inner {
+                display: flex;
+                a {
+                    display: flex;
+                    width: 48px;
+                    height: 48px;
+                    font-size: 24px;
+                    margin: 0;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid $mainClr;
+                    border-radius: 50%;
+                    @include transitions(700);
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        color: $mainClr;
+                    }
+                }
+                *+a {
+                    margin-left: .5rem;
+                }
+            }
+        }
+        .pr__cta {
+            .title {
+                position: relative;
+                margin: 0;
+                line-height: 1;
+                top: 6px;
+            }
+            .button {
+                text-transform: initial;
+            }
+        }
+    }
+    .pr__footer__center {
+        background: $footerCtrBg;
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            >li {
+                margin: 0 30px;
+                text-align: center;
+                >a {
+                    font-family: $secFnt;
+                    font-size: 20px;
+                    font-weight: 700;
+                    >span {
+                        font-family: $mainFnt;
+                        font-size: 18px;
+                        font-weight: 400;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .pr__footer__bottom {
+        background-color: $footerBtmBg;
+        position: relative;
+        padding: 0;
+
+        .section-inner {
+            padding: 30px 0;
+
+            .pr__copyrights {
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+
+            .pr__links {
+                a {
+                    display: inline-flex;
+                    font-size: 15px;
+                    flex-direction: column;
+                    &:after {
+                        content: "";
+                        height: 1px;
+                        width: 0;
+                        border-top: 1px solid $mainClr;
+                        @include transitions(700);
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
+
+                *+a {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    &.pr__dark {
+        background-color: $black;
+        color: $graydark;
+
+        a,
+        .title {
+            color: $white;
+        }
+
+        .button {
+            color: $white !important;
+        }
+
+        .pr__footer__bottom .section-inner {
+            border-color: rgba(255, 255, 255, .1);
+        }
+    }
+}
+
+.pr__contact__form {
+    .form-outer {
+        padding-top: 60px;
+        h2 {
+            margin-bottom: 0px;
+        }
+        p {
+            margin-top: 5px;
+        }
+    }
+
+    &.pr__dark {
+        .uk-modal-dialog {
+            background-color: $secClr;
+        }
+        .form-outer {
+            h2 {
+                color: $white;
+            }
+            .pr__form {
+                label {
+                    color: $white;
+                }
+                input,
+                select,
+                textarea {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+}

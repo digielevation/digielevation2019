@@ -1,0 +1,32 @@
+// Color Palette
+$mainClr: #E9204F; //#11099a
+$secClr: #101010;
+$black: #000;
+$graydark: #747474;
+$gray: #ACACAC;
+$graylight: #E0E0E0;
+$light: #F3F3F3;
+$white: #FFFFFF;
+$alternate: #dbe2e2;
+
+// Font Types
+$mainFnt: 'Trade Gothic', 'Roboto Condensed', sans-serif;
+$secFnt: 'Avant Grade', 'Poppins', sans-serif;
+
+// Used Colors
+$bodyClr: $graydark;
+$headingClr: $secClr;
+
+// Footer
+$footerTxt: $graydark;
+$footerLnk: $white;
+$footerBg: #1b1b1b;
+$footerCtrBg: #161616;
+$footerBtmBg: $black;
+
+// Light Footer
+// $footerTxt: $graydark;
+// $footerLnk: $secClr;
+// $footerBg: #fff;
+// $footerCtrBg: #fafafa;
+// $footerBtmBg: #fff;

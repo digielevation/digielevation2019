@@ -1,0 +1,278 @@
+// xs — Extra Small Screens
+@media (min-width: 320px) {}
+
+// s — Small Screens
+@media (min-width: 640px) {
+
+    /* Mobile Navbar */
+    .pr__mobile__nav {
+        .menu {
+            padding: 60px;
+
+            >ul>li>a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    /* Section: Hero */
+    .pr__hero__wrap {
+        background-position: right;
+    }
+
+}
+
+// m — Medium Screens
+@media (min-width: 960px) {
+
+    /* Header */
+    .pr__header {
+        height: 170px;
+        display: block;
+
+        .inner {
+            height: 170px;
+
+            .logo {
+                width: 170px;
+
+                .brand {
+                    height: 32px;
+                }
+            }
+
+            .navbar {
+                display: flex;
+                font-weight: bold;
+                letter-spacing: -.02em;
+                line-height: 1;
+
+                >*+* {
+                    margin-left: 40px;
+                }
+
+                .menu {
+                    display: block;
+                    position: relative;
+
+                    >ul {
+                        display: flex;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                        >*+li {
+                            margin-left: 2.4rem;
+                        }
+
+                        >li {
+                            position: relative;
+
+                            a {
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -4px;
+                                    width: 0;
+                                    height: 1px;
+                                    border-bottom: 2px solid;
+                                    display: inline-block;
+                                    @include transitions(700);
+                                }
+                            }
+
+                            &:hover,
+                            &.uk-active {
+                                a {
+                                    color: $mainClr;
+
+                                    &:after {
+                                        width: 20px;
+                                        color: $mainClr;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .lang {
+                    min-width: 40px;
+                    text-align: right;
+                    @include color($secClr, $mainClr);
+
+                    i {
+                        font-size: 10px;
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+            }
+
+            .navbar-tigger {
+                display: none;
+            }
+        }
+
+        &.uk-active {
+            background-color: $white;
+            height: 100px;
+
+            .inner {
+                height: 100px;
+            }
+        }
+
+        &.pr__dark {
+            .inner {
+                .logo .brand {
+                    background-position-y: -32px;
+                }
+            }
+        }
+    }
+
+    body.page-template .pr__hero__wrap {
+        .pr__header {
+            .inner {
+                .logo .brand {
+                    background-position-y: -32px;
+                }
+            }
+        }
+    }
+
+    /* Section: Global */
+    .pr__section {
+        .section-heading {
+            .inner {
+                flex-direction: row;
+                align-items: center;
+
+                .right {
+                    margin-top: 0;
+                }
+
+                .title {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+
+    /* Section: Features Boxes */
+    .item.feature-box {
+        >.inner {
+            z-index: 1;
+        }
+
+        &:last-child:before {
+            content: "";
+            background-color: $mainClr;
+            height: 70px;
+            width: calc(100% - 10px);
+            position: absolute;
+            bottom: -20px;
+            z-index: 0;
+        }
+    }
+
+    /* Section: About */
+    .item.about-box.has-image>.outer>.inner {
+        padding: 30px;
+    }
+
+    /* Section: Client Box */
+    .item.client-box {
+        &.client-image {
+            .image {
+                position: relative;
+                z-index: 1;
+            }
+            &:before {
+                content: "";
+                background-color: $mainClr;
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                right: -20px;
+                bottom: -20px;
+                z-index: 0;
+            }
+        }
+    }
+
+    /* Blog Listing */
+    .blog-listing {
+        &.chess-layout {
+            &:hover .post.type-post {
+                opacity: .4;
+            }
+
+            .item:nth-child(5n+5) .post.type-post,
+            .item:nth-child(2) .post.type-post {
+                .outer {
+
+                    .featured-image:after {
+                        top: 0;
+                        bottom: auto;
+                        border-top: 18px solid #ffffff;
+                        border-bottom: 0 solid transparent;
+                    }
+
+                    .inner {
+                        order: -1;
+
+                    }
+                }
+            }
+        }
+    }
+
+    /* Footer */
+    .pr__footer {
+        .columns {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .pr__social,
+            .pr__copyrights {
+                order: -1;
+            }
+        }
+    }
+
+    /* Utitlites */
+    .uk-heading-hero {
+        font-size: 80px;
+    }
+
+}
+
+// l — Large Screens
+@media (min-width: 1200px) {
+
+    /* Section: Hero */
+    .pr__hero__wrap {
+        background-position: 70%;
+    }
+
+    /* Section: Features Boxes */
+    .features-boxes {
+        >.item {
+            >.inner {
+                padding: 60px 40px;
+
+                .title {
+                    font-size: 24px;
+                    margin: 60px 0 5px 0;
+                }
+            }
+        }
+    }
+
+}
+
+// xl — Extra Large Screens
+@media (min-width: 1600px) {}

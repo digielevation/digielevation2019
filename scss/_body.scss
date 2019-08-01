@@ -1,0 +1,36 @@
+/* Global */
+html,
+body {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    min-height: 100%;
+}
+
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    color: $bodyClr;
+}
+
+/* Links */
+a,
+a:hover {
+    text-decoration: none;
+    @include color($secClr, $mainClr);
+}
+
+/* Headings */
+h1,
+.uk-h1,
+h2,
+.uk-h2,
+h3,
+.uk-h3,
+h4,
+.uk-h4,
+h5,
+.uk-h5 {
+    color: $headingClr;
+}

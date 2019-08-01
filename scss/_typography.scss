@@ -1,0 +1,128 @@
+/* Free Alternative Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800|Roboto+Condensed:400,700');
+
+/* Body */
+
+body {
+    font-family: $mainFnt;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.01em;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Heading */
+h1,
+.uk-h1,
+h2,
+.uk-h2,
+h3,
+.uk-h3,
+h4,
+.uk-h4,
+h5,
+.uk-h5,
+h6,
+.uk-h6 {
+    font-family: $secFnt;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: -.04em;
+}
+
+h1,
+.uk-h1 {
+    font-size: 48px;
+}
+
+h2,
+.uk-h2 {
+    font-size: 36px;
+}
+
+h3,
+.uk-h3 {
+    font-size: 30px;
+}
+
+h4,
+.uk-h4 {
+    font-size: 24px;
+}
+
+h5,
+.uk-h5 {
+    font-size: 20px;
+}
+
+h6,
+.uk-h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+/* Hero Heading */
+.uk-heading-hero {
+    font-size: 50px;
+}
+
+/* Text Styles */
+.pr-font-main {
+    font-family: 'Trade Gothic', 'Roboto Condensed', sans-serif;
+}
+.pr-font-second {
+    font-family: 'Avant Grade', 'Poppins', sans-serif;
+}
+.pr-text-large {
+    font-size: 24px;
+}
+.pr-text-small {
+    font-size: 14px;
+}
+
+
+/* Blockquote */
+blockquote {
+    > p {
+        font-size: 24px;
+        font-family: $secFnt;
+        font-weight: 800;
+        font-style: normal;
+        line-height: 32px;
+        letter-spacing: -.02em;
+        color: $secClr;
+        &:before {
+            content: "\275D";
+            font-weight: normal;
+            margin-right: 5px;
+        }
+        &:after {
+            content: "\275E";
+            font-weight: normal;
+            margin-left: 5px;
+        }
+    }
+    > footer {
+        margin-top: 20px;
+        font-style: normal;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+/* Base */
+strong,
+b {
+    font-weight: 800;
+    color: $secClr;
+}
+
+strong {
+    font-family: $secFnt;
+}

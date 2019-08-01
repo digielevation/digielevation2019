@@ -1,0 +1,180 @@
+
+
+// .pr__hero__wrap {
+//     .pr__header {
+
+//         .logo {
+//             opacity: 0;
+//             animation: fadeInRight ease 0.4s forwards;
+//             animation-delay: 2s;
+//         }
+
+//         .navbar {
+//             opacity: 0;
+//             animation: fadeInRight ease 0.4s forwards;
+//             animation-delay: 2.2s;
+//         }
+//     }
+
+//     .pr__hero {
+//         .line {
+//             transform: scaleX(0);
+//             transform-origin: left;
+//             animation: growLeft cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+//             animation-delay: 2.4s;
+//         }
+
+//         .title {
+//             opacity: 0;
+//             animation: fadeInTop ease 0.4s forwards;
+//             animation-delay: 2.6s;
+//         }
+
+//         .button {
+//             opacity: 0;
+//             animation: fadeInTop ease 0.4s forwards;
+//             animation-delay: 2.6s;
+//         }
+
+//         .breadcrumbs {
+//             opacity: 0;
+//             animation: fadeInTop ease 0.4s forwards;
+//             animation-delay: 2.8s;
+//         }
+//     }
+// }
+
+// .feature-box {
+//     opacity: 0;
+//     animation: fadeInTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+//     animation-delay: 2.8s;
+//     &:nth-child(2) {
+//         animation-delay: 2.9s;
+//     }
+//     &:nth-child(3) {
+//         animation-delay: 3s;
+//     }
+// }
+
+// /* Keyframs */
+// @keyframes fadeInTop {
+//     from {
+//         opacity: 0;
+//         transform: translateY(15px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// @keyframes fadeInRight {
+//     from {
+//         opacity: 0;
+//         transform: translateX(-15px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+// }
+
+// @keyframes growLeft {
+//     from {
+//         transform: scaleX(0);
+//     }
+
+//     to {
+//         transform: scaleX(1);
+//     }
+// }
+
+// @keyframes growTop {
+//     from {
+//         transform: scaleY(0);
+//     }
+
+//     to {
+//         transform: scaleY(1);
+//     }
+// }
+
+
+// .text-mask {
+//     display: inline-flex;
+//     position: relative;
+//     overflow: hidden;
+//     color: transparent !important;
+//     animation: colorShow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+//     animation-delay: 3.2s;
+//     &:after {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         background-color: #000;
+//         z-index: 1;
+//         animation: textMask cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
+//         animation-delay: 2.8s;
+//         -webkit-transform: translateX(-100%);
+//         transform: translateX(-100%)
+//     }
+// }
+
+// @-webkit-keyframes textMask {
+//     0% {
+//         -webkit-transform: translateX(-100%);
+//         transform: translateX(-100%)
+//     }
+
+//     50% {
+//         -webkit-transform: translateX(0);
+//         transform: translateX(0)
+//     }
+
+//     100% {
+//         -webkit-transform: translateX(100%);
+//         transform: translateX(100%)
+//     }
+// }
+
+// @keyframes textMask {
+//     0% {
+//         -webkit-transform: translateX(-100%);
+//         transform: translateX(-100%)
+//     }
+
+//     50% {
+//         -webkit-transform: translateX(0);
+//         transform: translateX(0)
+//     }
+
+//     100% {
+//         -webkit-transform: translateX(100%);
+//         transform: translateX(100%)
+//     }
+// }
+
+// @-webkit-keyframes colorShow {
+//     0% {
+//         color: transparent;
+//     }
+
+//     to {
+//         color: black;
+//     }
+// }
+
+// @keyframes colorShow {
+//     0% {
+//         color: transparent;
+//     }
+
+//     to {
+//         color: black;
+//     }
+// }

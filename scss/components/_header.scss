@@ -1,0 +1,121 @@
+/* Header */
+.pr__header {
+    display: block;
+    position: relative;
+    z-index: 99;
+
+    .inner {
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 150px;
+
+            .brand {
+                display: inline-block;
+                width: 100%;
+                height: 28px;
+                background-image: url('assets/images/logo.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .navbar {
+            display: none;
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .navbar-tigger {
+            width: 35px;
+            height: 19px;
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+
+            >span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #000;
+            }
+
+            >*+span {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &.uk-active {
+        background-color: $white;
+
+        .inner {
+            height: 90px;
+        }
+    }
+
+    &.pr__dark {
+
+        .inner {
+            .logo .brand {
+                background-position-y: -28px;
+            }
+
+            a,
+            .lang {
+                color: $white !important;
+            }
+
+            .navbar-tigger>span {
+                background-color: $white;
+            }
+        }
+
+        &.uk-active {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    }
+}
+
+/* Mobile Navbar */
+.pr__mobile__nav {
+    font-family: $secFnt;
+    font-weight: 700;
+
+    .menu {
+        padding: 60px 20px;
+
+        >ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            >*+li {
+                margin-top: 2rem;
+            }
+
+            >li {
+                >a {
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include transitions(700);
+
+                    &:hover {
+                        color: $mainClr;
+                    }
+                }
+
+                &.uk-active>a {
+                    color: $mainClr;
+                }
+            }
+        }
+    }
+}
