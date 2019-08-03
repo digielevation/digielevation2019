@@ -2097,6 +2097,10 @@ a.uk-slidenav {
     right: -20px;
     bottom: -20px;
     z-index: 0; }
+    /* Section: Hero */
+  .pr__hero__wrap {
+    background-position: right; 
+  background-image: none;} }
   /* Blog Listing */
   .blog-listing.chess-layout:hover .post.type-post {
     opacity: .4; }
