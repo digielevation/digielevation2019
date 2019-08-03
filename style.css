@@ -365,12 +365,17 @@ strong {
 
 /* Section: Hero */
 .pr__hero__wrap {
+  
   position: relative;
   background-color: #fafafa;
   background-repeat: no-repeat;
   background-size: 640px;
   background-position: left;
   display: block;
+/*    added image code here   */
+  background-image: url('assets/images/digielevation_digital_marketing_agency.png'); 
+  background-size: 880px; 
+  background-position: 78.8%;
   z-index: 99; }
   .pr__hero__wrap.pr__dark {
     background-color: #000; }
