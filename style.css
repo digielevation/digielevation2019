@@ -1982,7 +1982,8 @@ a.uk-slidenav {
       font-size: 1.5rem; }
   /* Section: Hero */
   .pr__hero__wrap {
-    background-position: right; } }
+    background-position: right; 
+  background-image: none;} }
 
 @media (min-width: 960px) {
   /* Header */
